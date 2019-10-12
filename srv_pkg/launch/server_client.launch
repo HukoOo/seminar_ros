@@ -1,0 +1,4 @@
+<launch>	
+	<node pkg="srv_pkg" type="server.py" name="server" output="screen"/>
+	<node pkg="srv_pkg" type="client.py" name="client" args="4 8"/>
+</launch>
