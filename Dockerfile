@@ -10,8 +10,8 @@ RUN git -C src clone \
       https://github.com/HukoOo/seminar_ros.git
 
 # build ros package source
+RUN source /opt/ros/kinetic/setup.bash
 RUN catkin_make
-
 RUN source devel/setup.bash
 
 # run ros package launch file
