@@ -13,4 +13,5 @@ RUN git -C src clone \
 RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash && catkin_make"
 
 # run ros package launch file
+COPY ./ros_entrypoint.sh /
 CMD ["roslaunch", "topic_pkg", "talker_listener.launch"]
