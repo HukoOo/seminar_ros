@@ -10,7 +10,8 @@ RUN git -C src clone \
       https://github.com/HukoOo/seminar_ros.git
 
 # build ros package source
-RUN /bin/bash -c "bash /ros_entrypoint.sh && catkin_make"
+RUN /bin/bash -c "bash /ros_entrypoint.sh"
+RUN /bin/bash -c "bash catkin_make"
 
 # run ros package launch file
 CMD ["roslaunch", "topic_pkg", "talker_listener.launch"]
